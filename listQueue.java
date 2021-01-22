@@ -50,9 +50,9 @@ class LinkedQueue {
 			return 0;
 		}else {
 			char item=front.item;
-			front=front.next;//1. front¿Í item À§Ä¡ ¹Ù²ãÁÖ°í
-			if(front==null) {//front »èÁ¦ ÀÌÇØÀÌÇØ ±Ùµ¥  delete¶û ¸Ó°¡ ´Ù¸¥Áö?
-				rear=null; //2.  rear nullÀº ¿Ö ÇØÁÖ´ÂÁö?
+			front=front.next;
+			if(front==null) {
+				rear=null;
 			}
 			return item;
 		}
@@ -60,7 +60,7 @@ class LinkedQueue {
 	
 	public void delete() {
 		if(isEmpty()) {
-			System.out.println("³»¿ë Á¸ÀçX");
+			System.out.println("ë‚´ìš© ì¡´ìž¬X");
 		}else {
 			front=front.next;
 			if(front==null) {
@@ -79,7 +79,7 @@ class LinkedQueue {
 	
 	public void print() {
 		if(isEmpty()) {
-			System.out.println("³»¿ë Á¸ÀçX");
+			System.out.println("ë‚´ìš© ì¡´ìž¬X");
 		}else {
 			QueueNode node=front;
 			while(node!=null) {
