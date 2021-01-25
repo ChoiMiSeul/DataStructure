@@ -1,4 +1,4 @@
-//Exception in thread "main" java.lang.NullPointerException?? root!=null인데 왜 오류나는징?
+//오류 Exception in thread "main" java.lang.NullPointerException?? root!=null인데 왜 오류나는징?
 package datastructure;
 
 class Node{
