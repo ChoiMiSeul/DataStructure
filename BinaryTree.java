@@ -1,4 +1,4 @@
-//Exception in thread "main" java.lang.NullPointerException?? root!=null ÇØÁá´Âµ¥ ¿Ö ¶ß´Â°ÇÂ¡
+//Exception in thread "main" java.lang.NullPointerException?? root!=nullì¸ë° ì™œ ì˜¤ë¥˜ë‚˜ëŠ”ì§•?
 package datastructure;
 
 class Node{
