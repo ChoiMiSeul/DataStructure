@@ -1,20 +1,20 @@
 package sort;
 
 public class HeapSort {
-	private static int[] arr; //¹è¿­ ¼±¾ğ
-	private static int number=10; //¹è¿­ Å©±â
+	private static int[] arr; //ë°°ì—´ ì„ ì–¸
+	private static int number=10; //ë°°ì—´ í¬ê¸°
 	
 	public static void heap(int[] arr, int number) {
-		for(int i=1;i<number;i++) { //¸ğµç ¹è¿­ °ÅÄ¡´Â µ¿¾È
-			int child=i; //ÀÚ½Ä¿¡ i°ª ÀúÀå
-			while(child>0) { //ÀÚ½ÄÀÌ 0º¸´Ù Å¬ µ¿¾È 
-				int parent=(child-1)/2; //???ºÎ¸ğ´Â (ÀÚ½Ä-1)/2  ¿Ö?
-				if(arr[child]>arr[parent]){ //ÀÚ½ÄÀÇ °ªÀÌ ºÎ¸ğÀÇ °ªº¸´Ù Å©¸é ±³È¯
+		for(int i=1;i<number;i++) { //ëª¨ë“  ë°°ì—´ ê±°ì¹˜ëŠ” ë™ì•ˆ
+			int child=i; //ìì‹ì— iê°’ ì €ì¥
+			while(child>0) { //ìì‹ì´ 0ë³´ë‹¤ í´ ë™ì•ˆ 
+				int parent=(child-1)/2; //???ë¶€ëª¨ëŠ” (ìì‹-1)/2  ì™œ?
+				if(arr[child]>arr[parent]){ //ìì‹ì˜ ê°’ì´ ë¶€ëª¨ì˜ ê°’ë³´ë‹¤ í¬ë©´ êµí™˜
 					int tmp=arr[parent];
 					arr[parent]=arr[child];
 					arr[child]=tmp;
 				}
-				child=parent; //ÀÚ½Ä¿¡ ºÎ¸ğ ÀúÀå
+				child=parent; //ìì‹ì— ë¶€ëª¨ ì €ì¥
 			}
 		}
 	}
@@ -27,18 +27,18 @@ public class HeapSort {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		arr=new int[number]; //Å©±â 10¸¸Å­ÀÇ arr
-		for(int i=0;i<number;i++) { //10°¡Áö ³­¼ö arr¿¡ ÀúÀå
+		arr=new int[number]; //í¬ê¸° 10ë§Œí¼ì˜ arr
+		for(int i=0;i<number;i++) { //10ê°€ì§€ ë‚œìˆ˜ arrì— ì €ì¥
 			arr[i]=(int)(Math.random()*100);
 		}
-		printArray(arr); //Á¤·Ä Àü
+		printArray(arr); //ì •ë ¬ ì „
 		
-		for(int i=number-1;i>0;i--) { // ¸ğµç ¹è¿­ Ä¿Áö´Â µ¿¾È, Á¦ÀÏ µŞ ¹è¿­ºÎÅÍ
-			int tmp=arr[0]; //°¡Àå Å« ¼ıÀÚ(root)¸¦ ¸¶Áö¸· ¹è¿­°ª°ú ±³È¯
+		for(int i=number-1;i>0;i--) { // ëª¨ë“  ë°°ì—´ ì»¤ì§€ëŠ” ë™ì•ˆ, ì œì¼ ë’· ë°°ì—´ë¶€í„°
+			int tmp=arr[0]; //ê°€ì¥ í° ìˆ«ì(root)ë¥¼ ë§ˆì§€ë§‰ ë°°ì—´ê°’ê³¼ êµí™˜ <<ì´ê±´ ì™œ í•˜ëŠ”ê²¨? ë£¨íŠ¸ ë¹¼ë†“ì„ë¼ê³ ?  ë°”ë¡œ í™í•˜ë©´ ì•ˆëŒ?
 			arr[0]=arr[i];
 			arr[i]=tmp;
 			
-			heap(arr, i); //Á¦ÀÏ µŞ°ª Á¦¿ÜÇÏ°í Èü
+			heap(arr, i); //ì œì¼ ë’·ê°’ ì œì™¸í•˜ê³  í™
 		}
 		System.out.println();
 		printArray(arr);
